@@ -31,7 +31,8 @@ To control your devices, Orbmote stores on your phone:
   **TLS certificate pin** (so the app can tell it is talking to the same TV next time);
 - your settings (language, theme, haptics, which features you turned on).
 
-This information is **never sent to us or to anyone else**. Orbmote talks to your TV, box or
+This information is **never sent to us or to anyone else** (the one exception is a diagnostics
+file you choose to send yourself, with addresses removed: see §4). Orbmote talks to your TV, box or
 air conditioner directly over your local network or by infrared. Pairing tokens, keys and
 certificate pins are encrypted with a key kept in your phone's secure hardware and are never
 included in backups; after moving to a new phone you pair each TV again.
@@ -83,6 +84,17 @@ Orbmote asks for each permission only when you use the feature that needs it.
 Orbmote contains no advertising, no ad SDKs, no attribution or analytics SDKs, and no crash
 reporting SDK. We do not sell or share personal information for advertising, and we do not
 track you across apps or websites.
+
+**Diagnostics you choose to send.** Settings has a "Send diagnostics" row so you can tell us
+when a TV doesn't respond. Only when you tap it, Orbmote writes a text file with its recent
+connection log (which kind of TV, what it tried and what the TV answered, the app and Android
+version and the phone model) and opens your phone's share sheet. You pick the app (for example
+your email app, already addressed to our support email) and can read the file, change the
+recipient or cancel. Orbmote never sends it by itself. The log never contains your TVs' IP or
+MAC addresses, serial numbers, pairing tokens, keys or Wi-Fi names: they are removed when each
+line is written. The log stays on your phone (at most 256 KB, lines older than 7 days are
+dropped, never backed up). If you send it to us, we use it only to answer you and fix the
+problem, and delete it once that is done.
 
 If we ever add anonymous diagnostics (for example which infrared code set worked), we will
 update this policy and the Play Store listing first, and Settings will have a switch to turn
